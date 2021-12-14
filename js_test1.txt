@@ -91,6 +91,42 @@
 </body>
 </html>
 
+//2번 문제 코드 축소
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #line {border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <h1>월화수목금토일</h1>
+    <p id="line"></p>
+    <script>
+        var day = prompt("월화수목금토일 중에서 입력하세요");
+
+        switch(day){
+            case "월":
+            case "화":
+            case "수":
+            case "목":
+            case "금":
+                document.write(day + ": 평일")
+                break;
+            case "토": 
+            case "일": 
+                document.write(day + ": 휴일")
+                break;
+       default : alert("잘못 입력했습니다.");
+    }
+    </script>
+</body>
+</html>
+
 
 //3. 패스워드를 입력받아 검증하고 그 결과를 출력하라.
 // - 패스워드 pwd를 입력하면 ‘correct’ 출력
