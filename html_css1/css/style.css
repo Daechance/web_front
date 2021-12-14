@@ -1,0 +1,97 @@
+/* OPTION a 밑줄 제거!함 */
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+	font:normal 16px "malgun gothic";
+}
+
+#bold{font-weight:bold;}
+.fontsize{font-size:30px;}
+.litop{margin-top:20px;}
+
+/*header*/
+.header {
+    width: 1024px;
+    height: 200px;
+    background-color: yellow;
+    margin: 0 auto;
+}
+.header > ul > li {
+    float: left;
+    margin-top: 20px;
+}
+.header_t1{
+    float: left;
+    font-size: 40px;
+    margin-left:440px;
+}
+/*container > nav > selctoin*/
+.container{
+    width:1024px;
+    height: 790px;
+    margin: 0 auto;
+}
+.nav{
+    float: left;
+    width: 200px;
+    height: 790px;
+    background-color: orange;
+}
+.nav p{
+    margin-top: 20px;
+}
+.nav > ul > li {
+    margin-left: 90px;
+}
+.section {
+    float: left;
+    width:824px;
+    height: 790px;
+    background-color: skyblue;
+}
+.section > ul > li  {
+    margin-top: 30px;
+}
+.section > ul > li > img{
+    float: left;
+    margin-left: 5px;
+    width: 150px;
+    height: 220px;
+}
+/*footer*/
+.footer{
+    width: 1024px;
+    height: 80px;
+    background-color: hotpink;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/*sub!!!!!*/
+/*sub header*/
+.sub_header{
+    width: 700px;
+    height: 100px;
+    background-color: yellow;
+    margin: 0 auto;
+}
+/*visual*/
+.visual{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 650px;
+    background-color:pink;
+    height: 300px;
+    margin-bottom: 20px;
+}
+/*sub_footer*/
+.sub_footer{
+    margin-top: 20px;
+    width: 700px;
+    height: 130px;
+    background-color: hotpink;
+    margin: 0 auto;
+    padding-top: 20px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <!-- css 같은 경우는  link 태그를 이용해 css 파일 연결 -->
+ <!-- js 같은 경우는   <script scr="js/myscript.s"></script> 파일 연결 -->
+    <style>
+        body{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1 id="heading">자바스크립트</h1>
+    <p id="text">위 텍스트를 클릭해보세요</p>
+    <p id="demo"></p>
+    <p id="data"></p>
+    <script>
+        var heading = document.querySelector('#heading'); //heading  anstj 아이디값 
+        heading.onclick = function(){ //onclick 클릭시
+            heading.style.color = "red";
+        }
+        document.write("<h1>h1태그를 넣어서 사용가능</h1>");
+        document.write("<b><big>이름</big></b>단어 강조"); //b bold big 크게
+        
+        //다양한 연산기능
+        document.getElementById("demo").innerHTML = 5 + 6; //문서안에 아이디요소를 가져온다 .html안에 넣다
+        
+        let x, y, z;  // Statement 1
+        x = 12;        // Statement 2
+        y = 29;        // Statement 3
+        z = x + y;    // Statement 4
+
+        document.getElementById("data").innerHTML =
+        "The value of z is "+ z + ".";  
+        document.write(11 + 6);
+
+        //알림
+        alert("안녕하세요"); //알림창
+        alert(11 + 6); //알림창에 값뜸
+        var name = prompt("이름을 입력하세요","강대찬"); //alert 창안에 input
+        //confirm(메시지); 
+        //var reply = confirm("내용에 대한 설명 2");
+        //console에 글쓰기
+
+        //console에 글쓰기
+        console.log(5 + 6); //f12 누르면 활성화 되는데 거기서 Console 누르면 값나옴
+        console.log("강대찬님 환영합니다."); //f12 누르면 활성화 되는데 거기서 Console 누르면 값나옴
+  
+        //1현재 날짜 , 2 시간 추출
+        var today = new Date();
+        var h = todat.getHours();
+
+    </script>
+</body>
+</html>
