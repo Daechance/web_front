@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  <h1>구구단</h1>-->
+    <script>
+
+    //구구단 만들기
+ //   var i, j;
+ //   for (i = 1; i <= 9; i ++){
+ //       document.write("<h3>" + i + "단</h3>"); //printf == same
+ //       for(j = 1; j <= 9; j++){
+ //           document.write(i + "X" + j + "="  + i*j + "<br>");
+ //       }
+ //   }
+
+    //팩토리얼 
+    var n = prompt("숫자를 입력하세요");
+    var msg = ""; //아무것도 입력안했는지 체크
+
+    if(n != null){ //취소 즉 아니요 버튼 눌렀는지 체크
+        var nfact = 1;
+        var i = 1;
+
+        while(i <= n){ //로직 i반복이 1 부터 입력수 까지 증가하면서 곱함
+            nfact *= i;
+            i++;
+        }
+        msg = n + "! = " + nfact; //결과값 표시할 문자열 
+    }else 
+        msg = "값을 입력하지 않았습니다.";
+
+        document.write(msg);
+
+    //알림창으로 나이 구하기 <만듬>
+     //var currentYear = 2021;
+     //var birthyear = prompt("태어난 연도를 입력하세요","년도");
+     //var age = currentYear - birthyear;
+     //document.write(birthyear+ "에 태어난 사람의 현제 나이는 " + age +  "입니다.");
+
+
+        //알림창으로 관심가는 세션 선택 후 출력
+//    var session = prompt("관심 세션은 선택해주세요. 1-마케팅, 2-개발, 3-디자인");
+//
+//    switch(session){
+//        case "1": document.write("<p>마케팅 세션은 <strong>201호에서</strong></p>")
+//            break;
+//        case "2": document.write("<p>마케팅 세션은 <strong>203호에서</strong></p>")
+//            break; 
+//        case "3": document.write("<p>마케팅 세션은 <strong>204호에서</strong></p>")
+//            break;        
+//        default : alert("잘못 입력했습니다.");
+//    }
+
+     //배열 !
+     //   let fruits = ['apple','banana'];
+     //   console.log(fruits.length); // 배열 몇칸 썼냐
+     //   let first = fruits[0]; // 첫번째 즉 0 배열 뭐들어가 있냐
+     //   let last = fruits[fruits.length - 1]; //마지막 = 과일 배열에 2 -1
+
+
+     //undefined 유형
+            //var x;
+            //if(typeof x === "undefined"){
+            //txt = "x is undefined";
+            //}else {
+            //    txt = "x is defined";
+            //}
+        
+        // 객체 ex var tata = new data();
+        
+        //js 변수의 특성 다됨 
+        //let foo = 42; foo is now number
+        //foo = 'bar'; foo is now string
+        //foo = true; foo is now Boolean
+    </script>
+       <!-- javascript는 느슨한 형식의 동적 언어입니다. 
+        자바 스크립트의 변수는 특정 값 유형과 직접 연결되지 않으며 모든 변수는 
+        모든 유형의 값을 할당(및 재할당)할 수 있습니다. -->
+</body>
+</html>
+
