@@ -1,0 +1,490 @@
+/* OPTION */
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+	font:normal 16px "malgun gothic";
+}
+a{
+	color:inherit;
+}
+.dn{
+	display:none;
+}
+.white{
+	color:white;
+}
+.jblue{
+	color:#115c9b;
+}
+.blue{
+	color:#1f76bd;
+}
+.bjblue{
+	background-color:#115c9b;
+}
+.bblue{
+	background-color:#1f76bd;
+}
+.tac{ text-align:center; }
+.tal{ text-align:left; }
+.container{
+	width:1440px;
+	margin:0 auto;
+}
+.f13{font-size:13px;}
+.f14{font-size:14px;}
+.f15{font-size:15px;}
+.f16{font-size:16px;}
+.f20{font-size:20px;}
+.f25{font-size:25px;}
+.row{
+	margin:0 -20px;
+}
+.fit{
+	padding:0 !important;
+}
+[class*="col-"]{
+	float:left;
+	padding:0 20px;
+	box-sizing:border-box;
+}
+.col-md-1{ width:calc( 100% / 12 * 1); }
+.col-md-2{ width:calc( 100% / 12 * 2); }
+.col-md-3{ width:calc( 100% / 12 * 3); }
+.col-md-4{ width:calc( 100% / 12 * 4); }
+.col-md-5{ width:calc( 100% / 12 * 5); }
+.col-md-6{ width:calc( 100% / 12 * 6); }
+.col-md-7{ width:calc( 100% / 12 * 7); }
+.col-md-8{ width:calc( 100% / 12 * 8); }
+.col-md-9{ width:calc( 100% / 12 * 9); }
+.col-md-10{ width:calc( 100% / 12 * 10); }
+.col-md-11{ width:calc( 100% / 12 * 11); }
+.col-md-12{ width:calc( 100% / 12 * 12); }
+
+.ml5{ margin-left:5px; }
+.ml10{ margin-left:10px; }
+.ml15{ margin-left:15px; }
+.ml20{ margin-left:20px; }
+.ml25{ margin-left:25px; }
+.ml30{ margin-left:30px; }
+.ml35{ margin-left:35px; }
+.ml40{ margin-left:40px; }
+.ml45{ margin-left:45px; }
+.ml60{ margin-left:60px; }
+
+.mt5{ margin-top:5px; }
+.mt10{ margin-top:10px; }
+.mt15{ margin-top:15px; }
+.mt20{ margin-top:20px; }
+.mt25{ margin-top:25px; }
+.mt30{ margin-top:30px; }
+.mt35{ margin-top:35px; }
+.mt40{ margin-top:40px; }
+.mt45{ margin-top:45px; }
+.mt60{ margin-top:60px; }
+
+.pt5{ padding-top:5px; }
+.pt10{ padding-top:10px; }
+.pt15{ padding-top:15px; }
+.pt20{ padding-top:20px; }
+.pt25{ padding-top:25px; }
+.pt30{ padding-top:30px; }
+.pt35{ padding-top:35px; }
+.pt40{ padding-top:40px; }
+.pt45{ padding-top:45px; }
+
+.right{
+	float:right;
+}
+
+/*HEADER*/
+
+#c1 ul li{
+	float:left;
+}
+
+.onheader{
+	height:30px;
+}
+header{
+	height:80px;
+}
+/*HEADER END*/
+#c2{
+	position:relative;
+	z-index:999;
+}
+#c2 ul li ul li{
+	transition:all .5s ease-in-out;
+	height:0px;
+	overflow:hidden;
+	width:120px;
+	padding-left:20px;
+	line-height:30px;
+	background:#115c9b;
+	border-top:solid 1px #1f76bd;
+}
+#c2 ul li:hover ul li{
+	height:33px;
+	cursor:pointer;
+}
+#c2 ul:nth-child(3) > li{
+	width:25px;
+	height:2px;
+	background:white;
+	margin-top:5px;
+	display:none;
+}
+/*C3 START*/
+/*VISUAL 부분*/
+
+#c3{
+	position:relative;
+	height:700px;
+	background:url("../images/slider/home-slider-1.jpg");
+}
+#c3 ul{
+	margin-top:250px;
+}
+#c3 ul li:nth-child(1){
+	font:bold 2.5em "malgun gothic";
+}
+#c3 ul li:nth-child(2){
+	font:normal 1.5em "malgun gothic";
+}
+#c3 button{
+	padding:10px 15px;
+	background:white;
+	border:none;
+}
+
+.main{
+	animation:main 1.5s ease-out;
+}
+
+.sub{
+	animation:sub 1.5s ease-out;
+}
+
+@keyframes main {
+	0%{ transform:translateY(-550px); }
+    20%, 50%, 80%, 100% {transform: translateY(0);}
+    30% {transform: translateY(50px);}
+    40% {transform: translateY(-20px);}
+    50% {transform: translateY(10px);}
+}
+
+@keyframes sub{
+	0%{ transform:translateY(550px); }
+	20%, 50%, 80%, 100% { transform:translateY(0); }
+	30%{transform:translateY(-50px);}
+	40% {transform: translateY(20px);}
+    50% {transform: translateY(-10px);}
+}
+
+/*C3 END*/
+
+/*C4 START*/
+/*그라디언트 박스 부분*/
+#c4 .container > ul{
+	padding:0 20px;
+}
+#c4 .container > ul > li{
+	height:370px;
+	background:linear-gradient(160deg, #115b9b -25%, #1290f8 50%, #115b9b 125%);
+	padding:0 39px;
+}
+#c4 button{
+	padding:10px 25px;
+	border:none;
+
+}
+/*C4 END*/
+/*C5 START*/
+/*장미원축제 & 오지랖 캠프 두 설명박스 부분*/
+.jang{
+	position:relative;
+}
+.jang > ul > li{
+	height:600px;
+	background:url("../images/home/rose.jpg")center center /cover;
+	color:white;
+}
+.jang > ul > li:hover p,
+.jang > ul > li:hover table{
+	opacity:1 !important;
+}
+.oji{
+	position:relative;
+}
+.oji > ul > li{
+	height:600px;
+	background:url("../images/home/camp.jpg")center center /cover;
+	color:white;
+}
+.op{
+	opacity:1 !important;
+}
+.back{
+	transition:all .5s ease;
+	width:100%;
+	height:600px;
+	
+}
+.back > p{
+	opacity:0;
+}
+.back:hover{
+	opacity:1;
+	background:rgba(18,144,248,0.8);
+}
+.oji > ul > li:hover p{
+	opacity:1 !important;
+	font-weight:bold;
+}
+#c5 table,th,td{
+	line-height:30px;
+	border:solid 2px white;
+	padding-left:5px;
+	border-collapse:collapse;
+}
+/*C5 END */
+/*C6 START*/
+/*나눔소식 부분*/
+.title > ul > li{
+	font:normal 1.8em "malgun gothic";
+	text-align:center;
+}
+.title > ul > li:nth-child(2){
+	width:280px;
+	height:1px;
+	margin:0 auto;
+}
+
+.title > ul > li:nth-child(3){
+	width:130px;
+	height:1.2px;
+	margin:0 auto;
+}
+
+#c6 .container > .content > div > ul{
+	padding:0px !important;
+	border:solid 2px #1290f8;
+	height:575px;
+}
+.content > div > ul > li:nth-child(2){
+	
+	margin:0 auto;
+	float:none;
+	height:30px;
+	border-radius:5px;
+	border:solid 1px #1290f8;
+	margin-top:15px;
+}
+.content > div > ul > li:nth-child(2) > ul > li:nth-child(1){
+	height:27px;
+	background:#115c9b;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+	line-height:24px;
+}
+.content > div > ul > li:nth-child(2) > ul > li:nth-child(2){
+	height:27px;
+	background:#e1e1e1;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+
+}
+.content button{
+	padding:15px 30px;
+	border:none;
+}
+/*C6 END*/
+/*FOOTER START*/
+footer{
+	border-top:solid 60px #115c9b;
+	height:470px;
+}
+
+#c8 ul > li:nth-child(2){
+	width:100%;
+	height:2px;
+	background:white;
+}
+#c8 ul > li:nth-child(3){
+	width:140px;
+	height:2px;
+	background:white;
+}
+#c8 input{
+	width:97%;
+	height:35px;
+	border:solid 2px white;
+	color:white;
+	background:#115c9b;
+	padding-left:10px;
+	margin-top:7px;
+}
+#c8 button{
+	border:none;
+	color:white;
+	border:solid 1px white;
+	padding:10px 15px;
+}
+::-webkit-input-placeholder{
+	color:white;
+}
+::-moz-placeholder{
+	color:white;
+}
+#c9{
+	height:25px;
+	color:white;
+}
+/*FOOTER END*/
+
+/* Responsive Publishing */
+
+@media screen and (max-width:768px){
+	.container{
+		width:100% !important;
+	}
+	#c2 ul:nth-child(1){
+		width:23%;
+	}
+	#c2 ul:nth-child(2){
+		width:77%;
+		margin-top:30px;
+	}
+	#c2 ul:nth-child(2) > li{
+		padding:0px 5px;
+		font-size:20px;
+	}
+	#c2 ul:nth-child(2) > li > ul {
+		margin-top:21px;
+	}
+	#c2 hr{
+		display:none;
+	}
+	#c3{
+		height:300px;
+	}
+	#c3 ul{
+		margin-top:70px;
+	}
+	#c4 .col-md-3{
+		width:50% !important;
+		margin-top:30px;
+		padding:0 10px !important;
+	}
+	#c6 .f25{
+		font-size:20px !important;
+	}
+	#c5 .col-md-6{
+		margin-top:80px;
+		width:100% !important;
+	}
+	#c6 .col-md-3{
+		width:50%;
+		margin-top:40px;
+	}
+	.col-md-4{
+		width:100%;
+	}
+	footer{
+		height:1100px;
+	}
+	#c7 img{
+		width:9%;
+	}
+}
+@media screen and (max-width:320px){
+	#c2 ul:nth-child(2) > li{
+		display:none;
+	}
+	#c2 ul:nth-child(3){
+		float:right;
+	}
+	#c2 ul:nth-child(3) > li{
+		display:block;
+	}
+	#c3 button{
+		display:none;
+	}
+	#c3{
+		height:200px;
+	}
+	.main{
+		font-size:20px !important;
+	}
+	.sub{
+		font-size:15px !important;
+	}
+	#c4 .col-md-3{
+		width:100% !important;
+	}
+	#c4 .col-md-3 > li{
+		padding:0 7px !important;
+	}
+	#c4 .tal{
+		font-size:13px !important;
+	}
+	#c5 > .container > div{
+		margin-top:-20px;
+	}
+	#c5 > .container > div > ul > li{
+		height:200px;	
+	}
+	.back{
+		height:200px;
+	}
+	.back > p,
+	.back > table{
+		display:none;
+	}
+	.back > ul > li > p:nth-child(1){
+		font-size:18px;
+	}
+	.op{
+		margin-top:100px;
+	}
+	.back > ul > li > p:nth-child(2){
+		font-size:11px;
+	}
+	#c6 .col-md-3{
+		width:100%;
+	}
+	#c6 .content ul li ul li{
+		font-size:9px !important;
+		padding:0;
+		text-align:center;
+	}
+	#c6 .content div ul{
+		height:470px !important;
+	}
+	#c6 .content ul li .f25{
+		font-size:17px !important;
+	}
+	#c6 .content ul li p{
+		font-size:11px !important;
+	}
+	#c7{
+		padding:0;
+	}
+	#c7 .container > ul{
+		padding: 0 !important;
+	}
+	#c7 img{
+		width:18% !important;
+	}
+	footer{
+		padding:0 !important;
+		height:1350px !important;
+	}
+	#c9{
+		height:60px;
+		text-align:right;
+	}
+}
