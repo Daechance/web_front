@@ -1,0 +1,169 @@
+//알림창 이용해서 입력한 수까지의 합 구하기
+//<!DOCTYPE html>
+//<html lang="en">
+//<head>
+//    <meta charset="UTF-8">
+//    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//    <title>Document</title>
+//    <style>
+//    </style>
+//</head>
+//<body>
+//    <script>
+//        var maxsize = prompt("얼마까지 더할까요?");
+//
+//        function printsum(maxsize){
+//            var sum = 0;
+//                for(let i = 1; i <= maxsize; i++){
+//                  sum += i;
+//                }
+//            return sum;
+//        }
+//
+//        alert("1부터 15까지 더하면 " + printsum(maxsize));
+//        
+//    </script>
+//</body>
+//</html>
+
+//함수
+//    <script>
+//        (function(a,b){ //매개변수
+//            sum = a + b;
+//        }(100,200)); //인수
+//
+//        document.write("함수 실행 결과 :" + sum);
+//    </script>
+
+//즉시실행 함수
+//
+//        (function(){
+//            var username = prompt("이름을 입력하세요");
+//            document.write("안녕하세요 ? <span class = 'accent'>" +username+ " </span>님!")
+//        }());
+//버튼클릭시 alert
+   <h1>javascrpit</h1>
+    <button onclick="this.innerHTML = Data()">the time is?</button>
+    <script>
+         function Data(){
+            alert("버튼을 클릭했습니다");
+        }
+    </script>
+
+///onclick 이벤트
+// 글자 클릭시 배경색 바꾸기
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 1000px;
+            margin: 0 auto;
+            height: 160px;
+        }
+        #container > ul > li {
+         	list-style:none;
+	        text-decoration:none;
+            float: left;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 120px ;
+            padding-right: 120px ;
+            margin-left: 10px;
+            border: solid 1px black;
+        }
+        #container_box{
+            width: 1000px;
+            margin: 0 auto;
+            height: 500px;
+            border: solid 1px black;
+            border-radius: 50px;
+        }
+    </style>
+    <script>
+        function changeBg(color){
+            var container = document.querySelector('#container_box');
+            container.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li> <a href="#" onclick="changeBg('green')"> Green </a></li>
+            <li> <a href="#" onclick="changeBg('Orange')"> Orange </a></li>
+            <li> <a href="#" onclick="changeBg('Purple')"> Purple </a></li>
+        </ul>
+    </div>
+    <div id="container_box">
+
+    </div>
+</body>
+</html>
+
+// 버튼 누르면 설명나옴 // 이밴트
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        width: 700px;
+        height: 600px;
+        background:url(iphone.jpeg) center center / cover;
+    }
+    #container > ul > p > button {
+        margin-top: 470px;
+        width: 130px ;
+        height: 50px ;
+        background-color: #fff;
+        opacity: 0.5;
+        border :solid 1px;
+        position: absolute;
+    }
+    .detail{
+        display: none;
+    }
+</style>
+<script>
+    function hidedetail(){
+        document.querySelector('#desc').style.display = "none";
+        document.querySelector('#open').style.display = "block";
+    }
+
+    function showdetail(){
+        document.querySelector('#desc').style.display = "block";
+        document.querySelector('#open').style.display = "none";
+    }
+
+</script>
+<body>
+    <div id="container">
+        <ul>
+            <p><button class="over" id="open" onclick="showdetail()">상세설명보기</button></p>
+        </ul>
+    </div>
+
+    <div id="desc" class="detail" >
+        <h4>아이폰</h4>
+        <p>
+            text nonetext nonetext nonetext nonetext nonetext nonetext none <br>
+            text nonetext nonetext nonetext nonetext nonetext nonetext none<br>
+            text nonetext nonetext nonetext nonetext nonetext nonetext none<br>
+            text nonetext nonetext nonetext nonetext nonetext nonetext none<br>
+            text nonetext nonetext nonetext nonetext nonetext nonetext none<br>
+            text nonetext nonetext nonetext nonetext nonetext nonetext none<br>
+        </p>
+        <button id="close"  onclick="hidedetail()">상세 설명 닫기</button>
+    </div>
+</body>
+</html>
