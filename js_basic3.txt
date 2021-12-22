@@ -1,0 +1,245 @@
+// 팝업 차단된 브라우저 알림 표시
+openPopup()">Open Windows</button>
+    <script>
+        function openPopup(){
+            var newApple = window.open("notice.html"," pop","width=500px, heght=500px");
+            if(newApple == null){
+                alert("팝업이 차단되어 있습니다. 팝업 차단을 해제해 주세요.");
+            }
+            newApple.moveBy(100,100);
+        }
+        document.write("asdsf");
+    </script>
+
+//navigator 객체
+    <script>
+        var x = "language of the browser :" + navigator.language; //language 브라우저 ui 언어 정보를 나타냅니다.
+        var x = "cookies enabled:" + navigator.cookieEnabled; //쿠키정보를 허용하면 true를 반환합니다.
+
+        document.write(x);
+    </script>
+
+//history 객체
+    <script>
+        history.back();
+        history.forward(); //다음페이지를 현재 화면으로 불러옵니다,
+        history.go(2);  //history 목록에서 현재 페이지를 기준으로 상대적인 위치에 있는 페이지를 현재 화면으로 불러옵니다. 
+        history.go(-2); //예를 들어 (1)은 다음페이지를 가져오고, (-1)이전페이지를 불러옵니다
+    </script>
+
+//사이트 위치 고정하기
+    <div id="display">
+    <script>
+        document.write("<p><b>location.href</b>" + location.herf + "</p>");
+        document.write("<p><b>locationi.host</b>" + location.host + "</p>");
+        document.write("<p><b>location.protocol</b>" + location.protocol + "</p>");
+    </script>
+    </div>
+    <button onclick="location.replace('https://www.google.com')">
+        구글 페이지로 이동하기
+    </button>
+
+//스크린 객체를 통해 내컴퓨터 화면 크기 알아내기
+    //내컴퓨터 화면크기 알려줌
+    <script>
+        document.write("<p><b>screen.availwidth :</b>" + screen.availWidth+ "<p>");
+        document.write("<p><b>screen.availHeight :</b>" + screen.availHeight+ "<p>");
+        document.write("<p><b>screen.width :</b>" + screen.width+ "<p>");
+        document.write("<p><b>screen.height :</b>" + screen.height+ "<p>");
+    </script>
+
+//dom요소 접근하고 속성 가져오기
+
+    <!-- document.getElementById(id) -->
+    <!-- document.getElementByTagName(name) -->
+    <!-- document.getElementByClassName(name) -->
+
+    <!-- ex -->
+    <!-- querySeletor("#heading")-->
+    <!-- querySeletorAll(".bright") -->
+
+
+    <!-- innertext , inner html -->
+            
+    <button onclick="inntext()">in ntext로 표시하기</button>
+    <button onclick="innhtml()">innhtml로 표시하기</button>
+    <h1>현재 시각 :</h1>
+    <div id="current"></div>
+    <script>
+        var now = new Date();
+
+        function inntext(){
+            document.getElementById("current").innerText = now;
+        }
+
+        function innhtml(){
+            document.getElementById("current").innerHTML = "<em>" + now +"</em>";
+        }
+    </script>
+
+//이미지 속성 가져오기
+    <div id="prod-pic">
+        <img src="iphone.jpeg" alt="아이폰사진임" id="cup" width="500px" height="500px" onclick="displaySrc()">
+    </div>
+    <script>
+        function displaySrc(){
+            var cup = document.querySelector("#cup"); //id 접근
+            alert("이미지소스:" + cup.getAttribute("src")); //주소 뜨게함
+        }
+    </script>
+
+//주소
+    <div id="prod-pic">
+        <img src="iphone.jpeg" alt="아이폰사진임" id="cup" width="500px" height="500px" onclick="displaySrc()">
+    </div>
+    <script>
+        function displaySrc(){
+            var cup = document.querySelector("#cup"); //id 접근
+            alert("이미지소스:" + cup.getAttribute("src")); //주소 뜨게함
+        }
+
+        function changePic(){
+            var newPic = this.src;
+            cup.setAttribute("src",newPic);
+        }//이미지 클릭시 주소 뜨게함
+    </script>
+
+//함수를 통해 이미지 변경 onclick이벤트 이용
+    <img src="img_blue.png" alt="세모임" id="cup">
+    <script>
+        var cup = document.querySelector("#cup");
+        cup.onclick = changePic;
+        
+        function changePic(){
+            cup.src = "img_red.png";
+        }
+    </script>
+
+//클릭한곳 x y 좌표 이벤트 설정
+    <img src="img_blue.png" alt="세모임" id="cup">
+    <script>
+        var cup = document.querySelector("#cup");
+
+        cup.onclick = function(event){
+            alert("이벤트 유형 :" + event.type + ", 이밴트 발생위치 :"
+             + event.pageX + "," + event.pageY);
+        }
+    </script>
+
+
+//querySelector + onclick을 통해 이미지 경로 표시!
+    <img src="img_blue.png" alt="세모임" id="card">
+    <script>
+        var card = document.querySelector("#card");
+        card.onclick = function(event){
+            alert("클릭한 이미지 파일 :" + this.src);
+        } //이미지 파일 경로 표시
+    </script>
+
+//이벤트 접근 addEventListener
+<body>
+    <img src="img_blue.png" alt="" id="cover"> 
+    <p id="desc">asdf</p>
+    <script>
+        //요소.addEventListener(이벤트, 함수 , 캡쳐여부);
+        //포인터를 올리면 함수시작 약간 hover 같은 느낌
+        var cover = document.getElementById("cover");
+        cover.addEventListener("mouseover", changePic);
+        cover.addEventListener("mouseout", originPic);
+
+        function changePic(){
+            cover.src = "img_red.png";
+        }
+
+        function originPic(){
+            cover.src = "img_blue.png";
+        }
+
+        document.getElementById("desc").style.color = "blue"; //desc 아이디를 받아서 색변경
+    </script>
+</body>
+
+//addEventListener 이벤트
+<style>
+    #rect{
+        width: 500px;
+        height: 500px;
+        border: solid 1px black;
+    }
+</style>
+<body>
+        <div id="rect"></div>
+    <script>
+        var myRect = document.querySelector("#rect");
+        myRect.addEventListener("mouseover", function(){
+            myRect.style.backgroundColor = "green";
+            myRect.style.borderRadius = "50%";
+        });
+        myRect.addEventListener("mouseout", function(){
+            myRect.style.backgroundColor="";
+            myRect.style.borderRadius="";
+            
+        });
+    </script>
+</body>
+
+//링크를 클릭하면 텍스트 표시하기
+    <div id="container">
+        <h1>dom을 공부합시다</h1>
+        <a href="#" onclick="addP(); this.onclick='';">더 보기</a> <!-- 링크를 클릭하면 addP() 함수가 한번만 실행되도록 합니다. -->
+        <div id="info"></div>
+    </div>
+    <script>
+       function addP(){
+            var newP = document.createElement("p");
+            var txtNode = document.createTextNode("DOM은 document object model의 줄임말입니다.");
+            newP.appendChild(txtNode);
+            document.getElementById("info").appendChild(newP);
+       }
+    </script>
+
+//dom 예제 2
+    <div id="container">
+        <h1>dom을 공부합시다</h1>
+        <a href="#" onclick="addContents(); this.onclick='';">더 보기</a>
+        <div id="info"></div>
+    </div>
+    <script>
+        function addContents() {
+            var newP = document.createElement("p");
+            var txtNode = document.createTextNode("dom은 document object model의 줄임말입니다.");
+            newP.appendChild(txtNode);
+
+            var newImg = document.createElement("img");
+            var srcNode = document.createAttribute("src");
+            var altNode = document.createAttribute("alt");
+            srcNode.value = "img_blue.png";
+            altNode.value = "돔 트리 예제 이미지";
+            newImg.setAttributeNode(srcNode);
+            newImg.setAttributeNode(altNode);
+
+            document.getElementById("info").appendChild(newP);
+            document.getElementById("info").appendChild(newImg);
+        }
+    </script>
+
+
+
+    <div id="container">
+        <h1>web programming</h1>
+        <p>공부할 주제를 기록해 보세요</p>
+        <p>공부가 끝난것을 클릭해서 삭제할 수 있습니다.</p>
+        <input type="text"><button>추가</button>
+    </div>
+    <script>
+        function newRegister(){
+
+            var items = document.querySelectorAll("li");
+            for(i =0; i < items.length; i++){
+                items[i].addEventListener("click", function(){
+                    if(this.parentNode)
+                        this.parentNode.removeChild(this);
+                });
+            }
+        }
+    </script>
