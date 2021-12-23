@@ -1,0 +1,144 @@
+1. 다음 배열 데이터를 반복문을 사용해서 다음과 같이 리스트로 출력하라. - document.write() 사용
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #line{
+        border:  solid 1px black;
+    }
+</style>
+<body>
+    <h1>라면을 만드는데 요한 재료</h1>
+    <p id="line"></p>
+    <p id="demo"></p>
+    <script>
+        var ingr = ["라면", "계란", "물", "파"];
+        let ingr_size = ingr.length;
+
+        let temp = "<ul>"; 
+        for (let i = 0; i < ingr_size; i++){
+            temp += "<li>" + ingr[i] + "</li>";
+        }
+        temp += "</ul>";
+
+        document.getElementById("demo").innerHTML = temp;
+    </script>
+</body>
+</html>
+
+
+2. 화면과 같이 출력되도록 <script>태그 내에 함수를 작성하라. (1)
+- bignum 함수는 두 인자를 비교해서 큰 수를 반환
+
+
+    <script>
+        
+        function bignum(a,b){
+
+            a *= 1; //문자열을 숫자로 변환;
+            b *= 1;
+
+            if(a>b){
+                return a;
+            }
+            if(a<b){
+                return b;
+            }
+        }
+
+        var b = bignum("62","555");
+        document.write("큰수 = ",  b)
+    </script>
+
+- prt 함수는 두 번째 인자의 수만큼 %를 문서에 출력
+
+    <script>
+        function prt(pat,end){
+            for(let i = 0; i < end; i++){
+                document.write(pat);
+            }
+        }
+
+         prt("%",7);
+    </script>
+
+3. 문자열 배열 colors를 사용해서 <div>태그의 배경색을 적용하여 다음과 같이 출력하라. var colors = [ "maroon", "red", "orange", "yellow", "olive", "purple", "fuchsia",
+"white", "lime", "green", "navy", "blue", "aqua", "teal", "black",
+"silver", "gray"]; - 반복문 및 document.write() 사용
+- 태그의 style 속성 사용
+
+<style>
+    div {
+        display: inline-block;
+        width: 60px;
+        padding: 10px;
+    }
+</style>
+<body> 
+    <h1>색 이름과 색</h1>
+    <div></div>
+    <script>
+        var color = [ "maroon", "red", "orange", "yellow", "olive", 
+        "purple", "fuchsia","white", "lime", "green", "navy", 
+        "blue", "aqua", "teal", "black","silver", "gray"];
+
+        for(let i=0; i<color.length; i++) { //배열 크기까지
+            var str = "<div style='background-color:";
+            str += color[i]; //색넣기
+            str += "'>" + color[i] + "</div>";//글넣기
+            document.write(str);
+        }
+    </script>
+</body>
+
+//4. 16개의 div 태그를 출력하고 <div>태그에 출력되는 배경색을 랜덤하게 적용하는 웹 문서 를 작성하라. 웹 문서를 로드할 때 마다 색상이 랜덤하게 바뀐다.
+- document.write() 및 반복문 사용
+- Math.floor(), Math.random() 사용
+- rgb(?,?,?)를 문자열로 반환하는 함수 작성 및 사용 : ?는 0~255의 난수
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        display: inline-block;
+        width: 150px;
+        padding: 10px;
+    }
+</style>
+<body> 
+    <h3>16개의 랜덤한 색 만들기</h3>
+    <hr>
+    <script>
+        for(i = 0; i < 4; i++){
+            for(j = 0; j < 4; j++){
+                let x = Math.random() * 255;
+                x = Math.floor(x);
+
+                let y = Math.random() * 255;
+                y = Math.floor(y);
+
+                let z = Math.random() * 255;
+                z = Math.floor(z);
+
+                document.write("<div style = 'background-color :" );
+                document.write("rgb(" + x +","  + y +","  + z +")'>");
+                document.write("rgb(" + x +","  + y +","  + z +")");
+                document.write("</div>");
+            }
+            document.write("<br>");
+        }
+    </script>
+    </body>
+</html>
