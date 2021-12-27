@@ -1,0 +1,247 @@
+/* OPTION */
+*{margin: 0; padding: 0; list-style: none; text-decoration: none; font-family:normal 16px "malgun gothic";}
+/*font-family: Antonio; */
+/*424242*/
+.container{width: 1440px; margin: 0 auto; font:normal 20px "malgun gothic";}
+
+[class*="col-"]{
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.col-md-1{width:calc(100% / 12 * 1);}
+.col-md-2{width:calc(100% / 12 * 2);}
+.col-md-3{width:calc(100% / 12 * 3);}
+.col-md-4{width:calc(100% / 12 * 4);}
+.col-md-5{width:calc(100% / 12 * 5);}
+.col-md-6{width:calc(100% / 12 * 6);}
+.col-md-7{width:calc(100% / 12 * 7);}
+.col-md-8{width:calc(100% / 12 * 8);}
+.col-md-9{width:calc(100% / 12 * 9);}
+.col-md-10{width:calc(100% / 12 * 10);}
+.col-md-11{width:calc(100% / 12 * 11);}
+.col-md-12{width:calc(100% / 12 * 12);}
+
+.mt10{ margin-top: 10px;}
+.mt20{ margin-top: 20px;}
+.f25{font-size: 25px; }
+/*header*/
+.header{
+    text-align: center;
+    height: 70px;
+} 
+
+.title{
+    float: left;
+	font:bolder 30px "malgun gothic";
+    margin-top: 15px;
+
+}
+.title:hover{
+    cursor: pointer;
+}
+
+.menu{
+    float: right;
+}
+.menu > li{
+    float: left;
+    width: 140px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+.menu > li:hover{
+    cursor: pointer;
+    transition: .8s;
+    background-color: #1f76bd;
+    color:#fff;
+}
+
+/*visual*/
+.visual{
+    background:url("image/visual.jpg");
+	height:800px;
+    margin-top: -5px;
+    text-align: center;
+    color: #fff;
+}
+
+.visual ul{
+	margin-top:250px;
+}
+.visual ul li:nth-child(1){
+	font:bold 80px "malgun gothic";
+}
+.visual ul li:nth-child(2){
+	font:normal 3.5em "malgun gothic";
+}
+
+.main{
+	animation:main 1.5s ease-out;
+}
+
+.sub{
+	animation:sub 1.5s ease-out;
+}
+
+.button > button{
+    background-color: #fff;
+    border: none;
+    padding: 15px 25px;
+    color:#1f76bd;
+    font-size: 17px;
+}
+.button > button:hover{
+    cursor: pointer;
+    border: solid 1px #fff;
+    transition: .5s;
+    font-size: 23px;
+}
+
+@keyframes main {
+	0%{ transform:translateY(-550px); }
+    20%, 50%, 80%, 100% {transform: translateY(0);}
+    30% {transform: translateY(50px);}
+    40% {transform: translateY(-20px);}
+    50% {transform: translateY(10px);}
+}
+
+@keyframes sub{
+	0%{ transform:translateY(600px); } 
+	20%, 50%, 80%, 100% { transform:translateY(0); }
+	30%{transform:translateY(-50px);}
+	40% {transform: translateY(20px);}
+    50% {transform: translateY(-10px);}
+}
+
+/*c1*/
+.contax{ text-align: center;}
+
+.tac > img {
+    width:318px;
+    height:200px;
+}
+
+.tac {
+    border: solid 1px #1f76bd;
+    height: 420px;
+    margin-top: 80px;
+}
+
+.tac > button {
+    padding: 10px 15px;
+    background-color: #1f76bd;
+    color:#fff;
+    margin-top: 20px;
+    border: none;
+}
+
+/*footer*/
+.footer{
+    margin-top: 90px;
+    background-color: #115c9b;
+    height: 400px;
+    border-top:solid 40px #1f76bd;
+}
+.footer_box{
+    color: white;
+    margin-top: 15px;
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background-color: #fff;
+    margin-top: -1px;
+}
+hr {
+    border: solid 1px white;
+}
+.footer_box > p{
+    font-size:  25px;
+}
+.footer_box input{
+	width:97%;
+	height:35px;
+	border:solid 2px white;
+	color:white;
+	background:#115c9b;
+	padding-left:10px;
+	margin-top:7px;
+}
+.footer_box button{ 
+    width: 25%;
+    height: 35px;
+    background-color: #115c9b;
+    border: solid 1px #fff;
+    color: #fff;
+}
+.footer_bottom img{
+    width: 30px;
+    height: 30px;
+}
+.footer_bottom > ul:nth-child(1){
+    float: left;
+    margin-left: 45%;
+}
+.footer_bottom > ul > li{
+    float: left;
+    margin-left: 5px;
+}
+.footer_bottom ul:nth-child(2) > li > p{
+    margin-top: 50px;
+    margin-left: -160px;
+}
+
+/*768px 반응형*/
+
+@media screen and (max-width:768px){
+	.container{
+		width:100% !important;
+	}
+    .header{
+        width: 100%;
+    }
+    .menu{
+        width: 80% !important;
+        float: right;
+        margin-right: -200px;
+    }
+    .menu > li{
+        width: 88px;
+        font-size: 15px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .contax{
+        margin-top: 50px;
+        height: 2300px;
+    }
+    
+    .contax .col-md-3{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .tac{
+        height: 500px;
+    }
+    .tac img{
+        width:100%;
+        height: 300px;
+    }
+    .footer{
+        height: 1000px;
+    }
+    .footer_box{
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .footer_bottom ul:nth-child(1){
+        margin-left: 40%;
+        margin-top: 50px;
+    }
+    .footer_bottom ul:nth-child(2) > li > p {
+        margin-top: 100px;
+    }
+
+}
